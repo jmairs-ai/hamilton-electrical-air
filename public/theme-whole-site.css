@@ -1,0 +1,17 @@
+/* Unified light theme: readable everywhere, including the first screen. */
+html[data-ham-theme="light"]{color-scheme:light}
+html[data-ham-theme="light"] :is(header,.site-header,.header,.site-nav,.navbar,.navigation,.masthead){background:#f6f5f2!important;color:#111!important;border-color:#d7d4cd!important}
+html[data-ham-theme="light"] :is(header,.site-header,.header,.site-nav,.navbar,.navigation,.masthead) :is(a,button,span,p,svg){color:#111!important}
+html[data-ham-theme="light"] :is(header,.site-header,.header,.site-nav,.navbar,.navigation,.masthead) :is(button,.menu-toggle){border-color:#444!important}
+html[data-ham-theme="light"] .mosaic-lead{background:#141414!important;color:#fff!important;isolation:isolate!important}
+html[data-ham-theme="light"] .mosaic-lead::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;pointer-events:none!important;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.48) 65%,rgba(0,0,0,.3))!important}
+html[data-ham-theme="light"] .mosaic-lead > img{filter:grayscale(1) brightness(.95) contrast(1.08)!important}
+html[data-ham-theme="light"] .mosaic-lead > :not(img){position:relative!important;z-index:1!important}
+html[data-ham-theme="light"] .mosaic-lead :is(h1,h2,h3,h4,p,span,small,strong,a,em,b){color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 2px 9px #000a!important;opacity:1!important}
+html[data-ham-theme="light"] .mosaic-lead :is(button,.ham-reveal-control){background:#111!important;color:#fff!important;border-color:#fff!important}
+html[data-ham-theme="light"] .mosaic-lead :is(button,.ham-reveal-control) *{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-ham-theme="light"] :is(.mobile-cta-bar,.mobile-actions,.sticky-actions,.sticky-cta,.bottom-cta,.bottom-bar,.floating-cta){background:#f7f6f2!important;color:#111!important}
+html[data-ham-theme="light"] .beta{background:#e9e8e5!important;color:#222!important}
+html[data-ham-theme="light"] .beta *{color:#222!important}
+html[data-ham-theme="dark"]{color-scheme:dark}
+html[data-ham-theme="dark"] :is(header,.site-header,.header,.site-nav,.navbar,.navigation,.masthead){background:#080808!important;color:#fff!important}

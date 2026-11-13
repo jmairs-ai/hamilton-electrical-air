@@ -1,0 +1,8 @@
+/* Resolution-independent traced vector from Stephen's supplied logo; no raster scaling. */
+header a[aria-label="Hamilton Electrical & Air home"] img.ham-official-logo,
+footer a[aria-label="Back to top"] img.ham-official-logo {display:none!important}
+header a[aria-label="Hamilton Electrical & Air home"],
+footer a[aria-label="Back to top"] {background-image:url('/images/hamilton-logo-vector.svg')!important;background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;flex-shrink:0!important}
+header a[aria-label="Hamilton Electrical & Air home"] {display:block!important;width:clamp(175px,25vw,245px)!important;height:clamp(88px,12vw,122px)!important}
+footer a[aria-label="Back to top"] {display:block!important;width:clamp(210px,36vw,345px)!important;height:clamp(108px,18vw,175px)!important}
+@media(max-width:700px){header a[aria-label="Hamilton Electrical & Air home"]{width:clamp(160px,47vw,195px)!important;height:95px!important}footer a[aria-label="Back to top"]{width:245px!important;height:125px!important;max-width:80vw!important}}

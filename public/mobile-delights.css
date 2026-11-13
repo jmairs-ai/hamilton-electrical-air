@@ -1,0 +1,24 @@
+/* Only touch-centric devices get these optional decorative details. */
+@media (hover:none) and (pointer:coarse) {
+  .ham-snowfall{position:fixed;inset:0;overflow:hidden;z-index:9999;pointer-events:none}
+  .ham-snowfall span{position:absolute;top:-38px;left:var(--x);color:#fff;filter:drop-shadow(0 1px 2px #111);animation:ham-snowfall 1.9s var(--delay) ease-in forwards}
+  .ham-snowfall svg{display:block;width:24px;height:24px}
+  @keyframes ham-snowfall{0%{opacity:0;transform:translate(0,-20px) rotate(0)}16%{opacity:.95}100%{opacity:0;transform:translate(var(--drift),75vh) rotate(220deg)}}
+  #root .service-switch button{position:relative}
+  .ham-mode-effect{position:absolute;right:8px;top:50%;width:22px;height:22px;pointer-events:none;color:currentColor;animation:ham-mode-pop .8s ease-out forwards}
+  .ham-mode-effect svg{width:100%;height:100%}
+  .ham-mode-effect.is-cool{color:#7bbfe4;filter:drop-shadow(0 0 2px #111)}
+  @keyframes ham-mode-pop{0%{opacity:0;transform:translateY(-50%) scale(.5)}25%{opacity:1;transform:translateY(-80%) scale(1)}100%{opacity:0;transform:translateY(-160%) scale(1.2)}}
+  #work .project:nth-child(3) .project-image{position:relative}
+  #work .project:nth-child(3) .project-image::after{content:'';position:absolute;inset:0;background:rgba(90,167,215,.26);pointer-events:none;opacity:0;transition:opacity .35s}
+  #work .project.ham-cool-preview .project-image::after{opacity:1}
+  #work .ham-cool-hint{position:absolute;left:10px;bottom:12px;z-index:2;padding:7px 9px;background:#111c;color:#fff;font:700 9px/1.2 Arial,sans-serif;letter-spacing:.08em;pointer-events:none}
+  #root .ham-touch-pressed{filter:brightness(.88);transform:scale(.99);transition:transform .12s,filter .12s}
+  footer .ham-share-site{display:inline-flex;align-items:center;gap:10px;border:0;background:transparent;color:inherit;padding:12px 0;font:inherit;text-align:left;min-height:44px;cursor:pointer}
+  footer .ham-share-site svg{width:22px;height:22px;flex:none}
+  footer .ham-share-feedback{display:block;font-size:12px;line-height:1.5}
+}
+@media (prefers-reduced-motion:reduce) {
+  .ham-snowfall,.ham-mode-effect{display:none!important}
+  #work .project:nth-child(3) .project-image::after,#root .ham-touch-pressed{transition:none!important;animation:none!important}
+}
