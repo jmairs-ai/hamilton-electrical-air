@@ -1,0 +1,14 @@
+/* ONE colour controller. There is deliberately no :hover colour state or mobile colour exception. */
+#root img.ham-tap-reveal-photo { filter: grayscale(1) !important; transition: filter .45s ease !important; cursor:pointer; }
+#root img.ham-tap-reveal-photo.ham-is-colour { filter: grayscale(0) !important; }
+#root img.ham-tap-reveal-photo:not(.ham-is-colour):hover { filter:grayscale(1)!important; }
+#root a:hover img.ham-tap-reveal-photo:not(.ham-is-colour) {filter:grayscale(1)!important}
+#root .ham-reveal-control {z-index:100;position:absolute;top:12px;right:12px;display:flex;align-items:center;justify-content:center;padding:10px 13px;min-height:43px;border:1px solid rgba(255,255,255,.8);color:#fff;background:rgba(0,0,0,.82);font:700 11px/1.15 'DM Sans',Arial,sans-serif;letter-spacing:.04em;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;touch-action:manipulation}
+#root .ham-reveal-control:focus-visible{outline:3px solid white;outline-offset:2px}
+#root .ham-reveal-control[aria-pressed="true"]{background:#f3f1ea;color:#111;border-color:#111}
+#root .ham-reveal-wrap {position:relative!important}
+#root .ham-reveal-bg{position:relative!important;isolation:isolate!important}
+#root .ham-reveal-bg::before {content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background-image:var(--ham-tap-image)!important;background-position:var(--ham-tap-position,center);background-size:var(--ham-tap-size,cover);background-repeat:no-repeat;filter:grayscale(1)!important;transition:filter .45s ease}
+#root .ham-reveal-bg.ham-is-colour::before {filter:grayscale(0)!important}
+#root .ham-reveal-bg> :not(.ham-reveal-control){position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){#root img.ham-tap-reveal-photo,#root .ham-reveal-bg::before{transition:none!important}}

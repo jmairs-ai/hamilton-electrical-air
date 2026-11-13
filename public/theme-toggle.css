@@ -1,0 +1,22 @@
+/* Light is the existing premium editorial palette; dark preserves black photographic sections and darkens paper sections. */
+.ham-theme-switch{position:fixed;left:18px;bottom:22px;z-index:92;display:flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid #a5a5a5;background:#f5f3ef;color:#151515;border-radius:40px;box-shadow:0 5px 20px #0003;cursor:pointer;font:700 10px/1 'Manrope',Arial,sans-serif;letter-spacing:.07em;min-height:43px;touch-action:manipulation}
+.ham-theme-switch .ham-theme-track{width:31px;height:18px;background:#aaa;border-radius:18px;display:flex;align-items:center;padding:2px;transition:background .2s}
+.ham-theme-switch .ham-theme-knob{width:14px;height:14px;background:white;border-radius:50%;box-shadow:0 1px 3px #0004;transition:transform .2s}
+.ham-theme-switch .ham-theme-sun,.ham-theme-switch .ham-theme-moon{font-size:15px;line-height:1}
+.ham-theme-switch:focus-visible{outline:3px solid #5a9bf5;outline-offset:3px}
+html[data-ham-theme="dark"] .ham-theme-switch{background:#242424;color:#f6f6f6;border-color:#666}
+html[data-ham-theme="dark"] .ham-theme-track{background:#777}
+html[data-ham-theme="dark"] .ham-theme-knob{transform:translateX(13px)}
+html[data-ham-theme="dark"],html[data-ham-theme="dark"] body,html[data-ham-theme="dark"] #root{background:#111;color:#f5f4f1}
+html[data-ham-theme="dark"] :is(.section,.trust-strip,.work-aside,.contact-form,.mobile-menu,.beta,.ha-service-detail,.ha-service-details,.ha-detail-card,.ha-services-panel,.ha-review-card,.ha-area-panel,.ha-faq-panel){background-color:#202020!important;color:#f5f4f1!important;border-color:#555!important}
+html[data-ham-theme="dark"] :is(.section,.work-aside,.contact-form,.mobile-menu,.trust-strip,.ha-service-detail,.ha-detail-card) :is(h1,h2,h3,h4,h5,p,span,li,label,strong,small,a){color:inherit}
+html[data-ham-theme="dark"] :is(.heading-note,.service-body p,.service-tag,.service-body li,.faq-item p,.work-aside>p,.photo-note span,.contact-form>p,.contact-form>small){color:#d2d2d2!important}
+html[data-ham-theme="dark"] :is(.service-row,.services-list,.faq-items,.faq-item,.work-aside,.service-body li,.form-heading,.trust-content>div,.footer-bottom,.ha-detail-card){border-color:#555!important}
+html[data-ham-theme="dark"] :is(.faq-item button,.service-link,.mobile-menu a){color:#f5f4f1!important}
+html[data-ham-theme="dark"] :is(.contact-form input,.contact-form select,.contact-form textarea,.form-fields input,.form-fields select,.form-fields textarea){background:#303030!important;color:#fff!important;border-color:#777!important}
+html[data-ham-theme="dark"] :is(.contact-form input,.contact-form textarea)::placeholder{color:#bbb}
+html[data-ham-theme="dark"] .footer-top,html[data-ham-theme="dark"] .footer-bottom{color:#f3f3f3}
+html[data-ham-theme="dark"] .ha-service-details :is(div,article){border-color:#555}
+html[data-ham-theme="dark"] .ham-theme-switch .ham-theme-label{color:#f5f4f1!important}
+@media(max-width:600px){.ham-theme-switch{bottom:78px;left:12px;padding:7px 9px;min-height:40px;gap:5px}.ham-theme-switch .ham-theme-label{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.ham-theme-switch *{transition:none!important}}

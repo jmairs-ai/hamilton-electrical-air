@@ -1,0 +1,53 @@
+/* Final mobile stability and touch-up layer. Keep the site's black/white identity. */
+html,body,#root{max-width:100%;overflow-x:clip}
+html{-webkit-text-size-adjust:100%}
+/* Avoid delayed reveal transitions hiding content during fast iPhone scrolling. */
+@media(max-width:767px){
+  #root section,#root article,#root .areas,#root .service-map{content-visibility:visible!important;contain:none!important}
+  /* 16px prevents Safari zooming the whole page when a visitor taps a field. */
+  #root #quote input,#root #quote select,#root #quote textarea,
+  #root .ham-suburb-checker input{font-size:16px!important}
+  #root .ham-map-frame{height:clamp(330px,95vw,440px)}
+  #root .ham-map-static{isolation:isolate}
+  #root .ham-map-static-head{align-items:flex-start}
+  #root .ham-map-static-head strong{display:block;max-width:100%;overflow-wrap:normal}
+  #root .ham-map-switch{width:100%;gap:7px}
+  #root .ham-map-frame iframe{background:#e6e5e0}
+  #root .ham-map-switch button{min-width:84px;min-height:44px}
+  #root #quote .ha-whatsapp-direct{min-height:44px!important}
+  #root .ha-desktop-cta{display:none!important}
+  #root .ham-reveal-control{font-size:10px;padding:9px 10px;min-height:40px;right:10px;top:10px}
+}
+#root .ham-map-static .ham-map-enable{z-index:4;white-space:nowrap}
+#root .ham-map-static .ham-radius-ring{z-index:3}
+#root .ham-map-static .ham-map-foot{position:relative;z-index:4}
+/* The legacy location badge floats over the redesigned map heading. The location
+   is already displayed by the accessible Aubin Grove / Perth / Mandurah tabs. */
+#root .map-view > .map-location-badge{display:none!important}
+#root .ham-map-static .ham-map-switch button:focus-visible,
+#root .ham-map-static .ham-map-enable:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.ha-desktop-cta span:last-child{display:none!important}
+/* Avoid Unicode arrow glyphs in CSS pseudo-elements: iOS can render them as blue emoji. */
+#root .ha-items > div::before,
+.ha-desktop-cta::after{
+  content:''!important;
+  display:inline-block!important;
+  width:16px;height:16px;
+  flex:0 0 16px;
+  margin-right:11px;
+  vertical-align:-2px;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19 19 5M6 5h13v13' fill='none' stroke='black' stroke-width='1.8'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19 19 5M6 5h13v13' fill='none' stroke='black' stroke-width='1.8'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.ha-desktop-cta::after{width:21px;height:21px;flex-basis:21px;margin:0;vertical-align:middle}
+/* Subtle branded snowflake on devices with a precise mouse pointer only. */
+@media(hover:hover) and (pointer:fine){
+  html,body,#root{cursor:url('/snowflake-cursor.svg') 16 16,auto}
+  #root a,#root button,#root summary,#root [role="button"]{
+    cursor:url('/snowflake-cursor.svg') 16 16,pointer!important;
+  }
+  #root input,#root textarea{cursor:text!important}
+  #root select{cursor:default!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}

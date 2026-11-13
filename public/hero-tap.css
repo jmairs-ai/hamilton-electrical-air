@@ -1,0 +1,15 @@
+/* Target just the leading hero photograph. Keep the text legible while colour is on. */
+#root .mosaic-lead>img.ham-is-colour,
+#root .mosaic-lead>img.ham-colour-active,
+#root .mosaic-lead>img.ham-is-colour:hover {
+  filter:grayscale(0) brightness(.64)!important;
+}
+#root .mosaic-lead>img:not(.ham-is-colour) {
+  filter:grayscale(1) brightness(.36)!important;
+}
+#root .mosaic-lead .ham-reveal-control { z-index:50!important; }
+#root .mosaic-lead{cursor:pointer}
+#root .mosaic-lead .mosaic-title a{cursor:pointer}
+@media(prefers-reduced-motion:reduce){
+ #root .mosaic-lead>img{transition:none!important}
+}

@@ -1,0 +1,14 @@
+/* Each homepage photo control is anchored to the photograph it actually toggles. */
+#root .mosaic-lead {position:relative!important}
+#root .mosaic-lead > .ham-reveal-control{
+ position:absolute!important;z-index:100!important;top:14px!important;right:14px!important;
+ left:auto!important;bottom:auto!important;pointer-events:auto!important;
+ touch-action:manipulation!important;
+}
+#root .mosaic-about {position:relative!important}
+#root .mosaic-about > .ham-reveal-control{
+ position:absolute!important;z-index:100!important;top:14px!important;right:14px!important;
+ left:auto!important;bottom:auto!important;pointer-events:auto!important;
+ touch-action:manipulation!important;
+}
+#root .mosaic > .ham-reveal-control{display:none!important}

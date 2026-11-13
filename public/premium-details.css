@@ -1,0 +1,49 @@
+/* Hamilton premium detail pass. Purely visual. Does not alter image colour controls. */
+.ha-reading-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:9999;pointer-events:none;background:linear-gradient(to right,#ecebe5 var(--ha-progress,0%),transparent var(--ha-progress,0%));mix-blend-mode:difference}
+.ha-arrived{animation:ha-appear .72s cubic-bezier(.22,.68,0,1) both}
+@keyframes ha-appear{from{opacity:.72;transform:translate3d(0,16px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(hover:hover) and (pointer:fine){
+ #root .ha-panel,#root .ha-review-card,#root .ha-bucket,#root .ha-feature-aside,#root .ha-advantage{
+   transition:transform .36s cubic-bezier(.2,.75,.3,1),box-shadow .36s ease!important
+ }
+ #root .ha-panel:hover,#root .ha-review-card:hover,#root .ha-bucket:hover{
+   transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,0,0,.075)
+ }
+ #root .service-switch button:hover,#root .ha-review-link:hover,#root .ha-feature-link:hover{opacity:.76}
+ #root .mosaic-work>.arrow,#root .mosaic-social>.arrow,#root .mosaic-service>.arrow,#root .mosaic-quote>.arrow,
+ #root .text-link .arrow,#root .project-open .arrow{
+    transition:transform .32s cubic-bezier(.2,.8,.2,1)
+ }
+ #root .mosaic-work:hover>.arrow,#root .mosaic-social:hover>.arrow,
+ #root .mosaic-service:hover>.arrow,#root .mosaic-quote:hover>.arrow,
+ #root .text-link:hover .arrow,#root .project:hover .project-open .arrow{
+   transform:translate(3px,-3px)
+ }
+}
+/* Keep photograph filters and direct click/tap colour behaviour unchanged. */
+#root .faq details{transition:border-color .25s ease}
+#root .faq details[open]{border-bottom-color:#a3a29b}
+#root .faq summary{min-height:58px;align-items:center}
+#root .faq details[open] p{animation:ha-faq .26s ease-out both}
+@keyframes ha-faq{from{opacity:.35;transform:translateY(-5px)}to{opacity:1;transform:none}}
+#root a:focus-visible,#root button:focus-visible,#root summary:focus-visible{
+ outline:2px solid #b4b3a7;outline-offset:3px
+}
+.ha-desktop-cta{
+ position:fixed;right:22px;bottom:22px;z-index:140;
+ display:flex;gap:16px;align-items:center;justify-content:space-between;
+ min-height:53px;padding:15px 18px;
+ text-decoration:none;background:#edece6;color:#111;border:1px solid #111;
+ box-shadow:0 12px 36px rgba(0,0,0,.24);
+ font:700 11px/1.3 'DM Sans',Arial,sans-serif;letter-spacing:.085em;
+ opacity:0;visibility:hidden;transform:translateY(14px);
+ transition:opacity .28s ease,transform .28s ease,visibility .28s ease,background .2s;
+}
+.ha-desktop-cta.ha-visible{opacity:1;visibility:visible;transform:none}
+.ha-desktop-cta:hover{background:#fff}
+.ha-desktop-cta span:last-child{font-size:18px}
+@media(max-width:700px){.ha-desktop-cta{display:none!important}.ha-arrived{animation-duration:.48s}}
+@media(prefers-reduced-motion:reduce){
+ .ha-arrived,#root .faq details[open] p{animation:none!important}
+ .ha-desktop-cta,#root .ha-panel,#root .ha-review-card{transition:none!important}
+}

@@ -1,0 +1,43 @@
+
+/* Single enquiry form and single customer review section. */
+#root #reviews{display:none!important}
+#root #whatsapp-quote{display:none!important}
+#root #colour-preview .ham-comp-note{display:none!important}
+#root #quote form > button[type="submit"].button,
+#root #quote form > button.ha-whatsapp-send{
+  box-sizing:border-box!important;
+  display:inline-flex!important;align-items:center!important;justify-content:space-between!important;
+  vertical-align:top!important;
+  width:calc(50% - 7px)!important;
+  min-height:64px!important;
+  margin:0!important;
+  padding:16px 16px!important;
+  font:700 12px/1.35 'DM Sans',Arial,sans-serif!important;
+  letter-spacing:.015em!important;
+  text-align:left!important;
+  white-space:normal!important;
+  border-radius:0!important;
+  touch-action:manipulation;
+}
+#root #quote form > button.ha-whatsapp-send{
+ margin-left:14px!important;background:transparent!important;color:#111!important;
+ border:1px solid #111!important;cursor:pointer
+}
+#root #quote form > button.ha-whatsapp-send:hover{background:#e0dfd8!important}
+#root #quote form > button.ha-whatsapp-send:focus-visible{outline:2px solid #111;outline-offset:3px}
+#root #quote form .ha-option-icon{font-size:20px;line-height:1;margin-left:12px;font-weight:400}
+#root #quote form > .ha-whatsapp-direct{
+ display:block!important;width:100%!important;margin:18px 0 0!important;
+ padding:10px 0!important;border:0!important;border-bottom:1px solid currentColor!important;
+ border-radius:0!important;background:transparent!important;color:#222!important;
+ text-align:left!important;font:600 13px/1.5 'DM Sans',Arial,sans-serif!important;
+ cursor:pointer;touch-action:manipulation
+}
+#root #quote form > .ha-whatsapp-direct:hover{text-decoration:underline;text-underline-offset:4px}
+#root #quote form > .ha-whatsapp-direct:focus-visible{outline:2px solid #111;outline-offset:4px}
+#root #quote form p.form-status{clear:both;margin-top:20px}
+#root #quote .ha-send-hint{font-size:12px!important;line-height:1.7;color:#555;margin:15px 0 0}
+@media(max-width:560px){
+ #root #quote form > button[type="submit"].button,#root #quote form > button.ha-whatsapp-send{width:100%!important;min-height:56px!important}
+ #root #quote form > button.ha-whatsapp-send{margin:10px 0 0!important}
+}

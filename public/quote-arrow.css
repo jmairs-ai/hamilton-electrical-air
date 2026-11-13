@@ -1,0 +1,4 @@
+.ham-mobile-actions a.ham-quote-arrow{display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;letter-spacing:.055em}
+.ham-mobile-actions .ham-quote-arrow svg{flex:0 0 18px;width:18px;height:18px;display:block;transition:transform .18s ease}
+.ham-mobile-actions .ham-quote-arrow:hover svg,.ham-mobile-actions .ham-quote-arrow:focus-visible svg{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){.ham-mobile-actions .ham-quote-arrow svg{transition:none!important}}

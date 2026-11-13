@@ -1,0 +1,48 @@
+
+/* Hamilton refinement: complements the established site without replacing it */
+:root{--ham-ink:#101010;--ham-cream:#f4f2ed}
+html{scroll-behavior:smooth;scroll-padding-top:106px}
+body{min-width:320px;overflow-x:clip}
+a,button,input,textarea,select,summary{-webkit-tap-highlight-color:transparent}
+button,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #f8f6f0;outline-offset:4px}
+.ham-skip-link{position:fixed;z-index:9999;top:-120px;left:14px;padding:13px 20px;background:#fff;color:#111;font-weight:750}
+.ham-skip-link:focus{top:14px}
+header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.97);-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.12)}
+header a,header button{min-height:44px}
+.hero,.section{scroll-margin-top:95px}
+img{height:auto;max-width:100%;object-position:center}
+.section img{transition:filter .25s ease, transform .4s ease}
+.section a:hover img{filter:contrast(1.07);transform:scale(1.015)}
+section{position:relative}
+input,select,textarea{min-height:44px}
+textarea{min-height:120px}
+summary{cursor:pointer}
+footer{padding-bottom:max(28px,env(safe-area-inset-bottom))}
+.ham-mobile-actions{display:none}
+.ham-inline-social{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#eae8e2;color:#141414;padding:24px 5vw}
+.ham-inline-social strong{font-weight:800;letter-spacing:.02em}
+.ham-inline-social p{font-size:13px;margin:4px 0 0;color:#585858}
+.ham-inline-social a{display:inline-flex;gap:10px;align-items:center;min-height:44px;border:1px solid #111;padding:11px 17px;font-weight:750;font-size:12px;letter-spacing:.07em;white-space:nowrap}
+.ham-inline-social a:hover{background:#111;color:white}
+@media(max-width:900px){
+header{padding-top:12px;padding-bottom:12px}
+header .desktop{gap:12px}
+.section{scroll-margin-top:75px}
+}
+@media(max-width:700px){
+html{scroll-padding-top:80px}
+body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+header{top:0}
+header .logo{max-width:182px;height:auto}
+header nav a,header button{min-height:46px}
+.ham-mobile-actions{position:fixed;z-index:150;bottom:0;left:0;right:0;display:grid;grid-template-columns:43% 57%;padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;background:rgba(8,8,8,.96);border-top:1px solid rgba(255,255,255,.22);box-shadow:0 -12px 35px rgba(0,0,0,.2);-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px)}
+.ham-mobile-actions a{display:flex;justify-content:center;align-items:center;min-height:48px;text-align:center;padding:10px;border:1px solid #eee;font:750 12px 'DM Sans',Arial,sans-serif;letter-spacing:.035em}
+.ham-mobile-actions a:first-child{color:#fff;border-color:#777}
+.ham-mobile-actions a:last-child{background:#f3f2ef;color:#111}
+.ham-inline-social{padding:22px 5vw;flex-direction:column;align-items:stretch}
+.ham-inline-social a{justify-content:center}
+h1{overflow-wrap:normal}
+}
+@media(max-width:380px){header .logo{max-width:150px}.ham-mobile-actions a{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

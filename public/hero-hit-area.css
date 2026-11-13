@@ -1,0 +1,21 @@
+/* Allow taps to reach the genuine first hero photo under its text layer. */
+#root .mosaic-lead > .mosaic-title{
+  pointer-events:none!important;
+}
+#root .mosaic-lead > .mosaic-title a,
+#root .mosaic-lead > .mosaic-title button{
+  pointer-events:auto!important;
+}
+#root .mosaic-lead > img.ham-tap-reveal-photo {
+  cursor:pointer!important;
+  touch-action:manipulation;
+}
+#root .mosaic-lead > img.ham-tap-reveal-photo.ham-is-colour,
+#root .mosaic-lead > img.ham-tap-reveal-photo.ham-colour-active {
+  filter:grayscale(0) brightness(.9)!important;
+}
+#root .mosaic-lead > img.ham-tap-reveal-photo:not(.ham-is-colour):not(.ham-colour-active){
+  filter:grayscale(1) brightness(.36)!important;
+}
+/* The corner project arrows are decorative, not separate tap targets. */
+#root .project-image .project-open{pointer-events:none!important}
